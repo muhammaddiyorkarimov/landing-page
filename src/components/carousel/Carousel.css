@@ -1,0 +1,139 @@
+.carousel {
+  max-width: 1200px;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.carousel-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100%;
+}
+
+.carousel-slide {
+  position: absolute;
+  transition: transform 1s ease, opacity 1s ease;
+  opacity: 0.6;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.carousel-slide.current-slide {
+  opacity: 1;
+  z-index: 2;
+  transform: scale(1.1);
+}
+
+.carousel-slide.prev-slide {
+  transform: translateX(-80%) scale(0.8);
+  z-index: 1;
+}
+
+.carousel-slide.next-slide {
+  transform: translateX(80%) scale(0.8);
+  z-index: 1;
+}
+
+.carousel-text {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  display: none;
+}
+
+.carousel-slide.current-slide .carousel-text {
+  display: block;
+}
+
+.carousel-text h2 {
+  margin: 0 0 10px;
+  font-size: 24px;
+}
+
+.carousel-text p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .carousel-slide img {
+    height: 300px;
+  }
+  .carousel-slide.current-slide {
+    transform: scale(1.1);
+  }
+
+  .carousel-slide.prev-slide, .carousel-slide.next-slide {
+    transform: translateX(-80%) scale(0.8), translateX(80%) scale(0.8);
+  }
+}
+@media (max-width: 992px) {
+  .carousel-slide img {
+    height: 250px;
+  }
+  .carousel-slide.current-slide {
+    transform: scale(1.1);
+  }
+
+  .carousel-slide.prev-slide, .carousel-slide.next-slide {
+    transform: translateX(-70%) scale(0.8), translateX(70%) scale(0.8);
+  }
+}
+@media (max-width: 768px) {
+  .carousel {
+    height: 40vh;
+  }
+  .carousel-slide img {
+    height: 200px;
+  }
+  .carousel-slide.current-slide {
+    transform: scale(1.1);
+  }
+
+  .carousel-slide.prev-slide, .carousel-slide.next-slide {
+    transform: translateX(-50%) scale(0.8), translateX(50%) scale(0.8);
+  }
+
+  .carousel-text h2 {
+    margin: 0 0 10px;
+    font-size: 18px;
+  }
+  
+  .carousel-text p {
+    margin: 0;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-slide.current-slide {
+    transform: scale(1.05);
+  }
+
+  .carousel-slide.prev-slide, .carousel-slide.next-slide {
+    transform: translateX(-80%) scale(0.8), translateX(80%) scale(0.8);
+  }
+
+  .carousel-text h2 {
+    font-size: 20px;
+  }
+
+  .carousel-text p {
+    font-size: 14px;
+  }
+}

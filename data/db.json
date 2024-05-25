@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "image": "../src/images/company.png",
+    "title": "Buxgalteriya hisobini yuritish",
+    "description": "Bizning kompaniyamiz buxgalteriya hisobi xizmatlarini taqdim etadi. Bu xizmatlar to'liq hisobot tayyorlash, soliq to'lovlarini hisoblash va boshqarish imkoniyatini beradi."
+  },
+  {
+    "id": 2,
+    "image": "../src/images/company.png",
+    "title": "Buxgalteriya hisobini yuritish",
+    "description": "Bizning kompaniyamiz buxgalteriya hisobi xizmatlarini taqdim etadi. Bu xizmatlar to'liq hisobot tayyorlash, soliq to'lovlarini hisoblash va boshqarish imkoniyatini beradi."
+  },
+  {
+    "id": 3,
+    "image": "../src/images/company.png",
+    "title": "Buxgalteriya hisobini yuritish",
+    "description": "Bizning kompaniyamiz buxgalteriya hisobi xizmatlarini taqdim etadi. Bu xizmatlar to'liq hisobot tayyorlash, soliq to'lovlarini hisoblash va boshqarish imkoniyatini beradi."
+  },
+  {
+    "id": 4,
+    "image": "../src/images/company.png",
+    "title": "Buxgalteriya hisobini yuritish",
+    "description": "Bizning kompaniyamiz buxgalteriya hisobi xizmatlarini taqdim etadi. Bu xizmatlar to'liq hisobot tayyorlash, soliq to'lovlarini hisoblash va boshqarish imkoniyatini beradi."
+  },
+  {
+    "id": 5,
+    "image": "../src/images/company.png",
+    "title": "Buxgalteriya hisobini yuritish",
+    "description": "Bizning kompaniyamiz buxgalteriya hisobi xizmatlarini taqdim etadi. Bu xizmatlar to'liq hisobot tayyorlash, soliq to'lovlarini hisoblash va boshqarish imkoniyatini beradi."
+  },
+  {
+    "id": 6,
+    "image": "../src/images/company.png",
+    "title": "Buxgalteriya hisobini yuritish",
+    "description": "Bizning kompaniyamiz buxgalteriya hisobi xizmatlarini taqdim etadi. Bu xizmatlar to'liq hisobot tayyorlash, soliq to'lovlarini hisoblash va boshqarish imkoniyatini beradi."
+  },
+  {
+    "id": 7,
+    "image": "../src/images/company.png",
+    "title": "Buxgalteriya hisobini yuritish",
+    "description": "Bizning kompaniyamiz buxgalteriya hisobi xizmatlarini taqdim etadi. Bu xizmatlar to'liq hisobot tayyorlash, soliq to'lovlarini hisoblash va boshqarish imkoniyatini beradi."
+  }
+]

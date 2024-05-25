@@ -1,0 +1,155 @@
+.we-connect {
+  background-image: url('../../images/background2.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  position: relative;
+  padding: 50px 0;
+  transition: transform 0.2s ease-in-out;
+}
+
+.main-title {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #fff;
+  background: rgba(159, 159, 159, 0.185);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  padding: 20px;
+}
+
+.about {
+  color: white;
+  padding: 20px;
+}
+
+.about h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.about p {
+  font-size: 16px;
+}
+
+.about span {
+  color: #666;
+  display: block;
+  margin-top: 20px;
+  font-weight: bold;
+  font-weight: 400;
+}
+
+.work-time {
+  margin-top: 10px;
+}
+
+.connect-form {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.connect-form form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 440px;
+	background: rgba(159, 159, 159, 0.185);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+	padding: 20px;
+}
+
+.connect-form form div {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.connect-form form label {
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: white;
+  display: block;
+}
+
+.connect-form form input,
+.connect-form form textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.185);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  color: white;
+  resize: none;
+}
+
+.connect-form form input:focus,
+.connect-form form textarea:focus {
+  outline: none;
+}
+
+.connect-form form input.error,
+.connect-form form textarea.error {
+  border: 1px solid red;
+}
+
+.connect-form form button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background: rgba(112, 200, 254, 0.655);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.connect-form form button:hover {
+  background-color: #2980b9;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  background-color: rgba(97, 146, 253, 0.505);
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 16px;
+  color: white;
+  margin-top: 40px;
+}
+
+@media (min-width: 768px) {
+  .contact-card {
+    flex-direction: row;
+  }
+
+  .about, .connect-form {
+    flex: 1;
+  }
+}

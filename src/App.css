@@ -1,0 +1,31 @@
+/* header section carousel */
+.Home {
+	background-image: url('./images/background2.png');
+	background-repeat: no-repeat;
+	z-index: 100;
+	background-position: right top;
+	margin-top: 50px;
+}
+
+.logo-items {
+	width: 100%;
+	margin-bottom: 100px;
+}
+
+.logo-items .container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.logo-items .container .logos {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 650px;
+}
+
+.logo-items .container .logos img{
+	width: 100%;
+}

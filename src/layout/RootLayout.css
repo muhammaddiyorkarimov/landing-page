@@ -1,0 +1,247 @@
+/* App.css */
+:root {
+  --primary-text-color: #333;
+  --primary-background-color: #fff;
+}
+
+.root-layout {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  width: 100%;
+  padding: 15px 0;
+}
+
+header .container {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+}
+
+.hamburger-menu .bar {
+  width: 30px;
+  height: 3px;
+  background-color: var(--primary-background-color);
+  transition: all 0.3s ease;
+}
+
+.hamburger-menu .bar.open:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-menu .bar.open:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu .bar.open:nth-child(3) {
+  transform: rotate(-45deg) translate(10px, -10px);
+}
+
+.navbar {
+  display: flex;
+  gap: 20px;
+
+}
+
+.navbar a {
+  color: var(--primary-background-color);
+  text-decoration: none;
+}
+
+.navbar a.active {
+  color: #0C66EA;
+}
+
+.logo {
+  font-size: 24px;
+  color: var(--primary-background-color);
+  text-decoration: none;
+}
+
+.items {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.select-language {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: var(--primary-background-color);
+  border-radius: 16px;
+}
+
+.select-language span {
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.select-language span.active {
+  background: #0C66EA;
+  border-radius: 16px;
+  padding: 5px 10px;
+  background-color: rgba(5, 105, 255, 0.5);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  border-radius: 16px;
+  color: var(--primary-background-color);
+  background-color: rgba(5, 105, 255, 0.5);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* footer */
+footer {
+  margin-bottom: 100px;
+}
+.contact-card {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 1200px;
+  background: rgba(159, 159, 159, 0.185);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  margin: 0 auto;
+  color: white;
+}
+
+.contact-info {
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+.contact-info h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.contact-info p, .contact-info h3 {
+  margin: 10px 0;
+}
+
+.social-media {
+  display: flex;
+  gap: 10px;
+}
+
+.social-media a {
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.map {
+  max-width: 500px;
+  height: 350px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.map iframe {
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  .contact-card {
+    flex-direction: row;
+  }
+
+  .contact-info, .map {
+    flex: 1;
+  }
+
+  .contact-info {
+    margin-bottom: 0;
+  }
+
+  .map iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+@media (max-width: 990px) {
+  .hamburger-menu {
+    display: flex;
+  }
+
+  .navbar {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.185);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: start;
+    -top: 50px;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    transition: left 0.3s ease;
+  }
+
+  .navbar.open {
+    left: 0;
+  }
+
+  .navbar .contact {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 10px;
+    border-radius: 16px;
+    color: var(--primary-background-color);
+    background-color: rgba(5, 105, 255, 0.5);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    margin-top: auto;
+  }
+
+  .items {
+    display: none;
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}
