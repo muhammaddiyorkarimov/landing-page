@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import './Contact.css';
+import { useTranslation } from 'react-i18next';
 
 function Contact() {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: '',
     phone_number: '',
@@ -24,9 +26,9 @@ function Contact() {
 
     // Form validation
     const newErrors = {};
-    if (!formData.name) newErrors.name = 'Ism kiritilishi kerak';
-    if (!formData.phone_number) newErrors.phone_number = 'Telefon raqam kiritilishi kerak';
-    if (!formData.description) newErrors.description = 'Ta\'rif kiritilishi kerak';
+    if (!formData.name) newErrors.name = t('nameRequired');
+    if (!formData.phone_number) newErrors.phone_number = t('phoneNumberRequired');
+    if (!formData.description) newErrors.description = t('descriptionRequired');
 
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
@@ -49,33 +51,33 @@ function Contact() {
       }
 
       const data = await response.json();
-      setResponseMessage('Ma\'lumotlar muvaffaqiyatli yuborildi!');
+      setResponseMessage(t('submissionSuccess'));
     } catch (error) {
-      setResponseMessage('Xatolik yuz berdi: ' + error.message);
+      setResponseMessage(`${t('submissionError')}: ${error.message}`);
     }
   };
 
   return (
     <div className='we-connect'>
       <div className="container">
-        <div className="main-title">Biz bilan bog'laning</div>
+        <div className="main-title">{t('contactUs')}</div>
         <div className="contact-card">
           <div className="about">
-            <h1>Barcha savollaringizga javob beramiz</h1>
-            <p>va hal qilishga yordam beramiz. Siz bilan hamkorlik qilganimizdan mamnunmiz!</p>
+            <h1>{t('answerAllQuestions')}</h1>
+            <p>{t('happyToAssist')}</p>
             <div className="status-badge">
-              <span className="status-dot"></span>Online
+              <span className="status-dot"></span>{t('online')}
             </div>
             <div className="work-time">
-              <p>Ish vaqti: 09:00 - 18:00</p>
-              <span>(dam olish kunlari bundan mustasno)</span>
+              <p>{t('workingHours')}</p>
+              <span>{t('excludingWeekends')}</span>
             </div>
           </div>
           <div className="connect-form">
             <form onSubmit={handleSubmit}>
               <div>
                 <label>
-                  Ism:
+                  {t('name')}:
                   <input 
                     type="text" 
                     name="name" 
@@ -89,7 +91,7 @@ function Contact() {
               </div>
               <div>
                 <label>
-                  Telefon raqam:
+                  {t('phoneNumber')}:
                   <input 
                     type="text" 
                     name="phone_number" 
@@ -103,7 +105,7 @@ function Contact() {
               </div>
               <div>
                 <label>
-                  Ta'rif:
+                  {t('description')}:
                   <textarea 
                     name="description" 
                     value={formData.description} 
@@ -114,7 +116,7 @@ function Contact() {
                 </label>
                 {errors.description && <p className="error-message">{errors.description}</p>}
               </div>
-              <button type="submit">Yuborish</button>
+              <button type="submit">{t('submit')}</button>
             </form>
             {responseMessage && <p>{responseMessage}</p>}
           </div>

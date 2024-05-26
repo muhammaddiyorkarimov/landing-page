@@ -1,8 +1,11 @@
+// src/components/Carousel.jsx
 import React, { useState, useEffect } from 'react';
 import './Carousel.css';
+import { useTranslation } from 'react-i18next';
 
 const Carousel = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -24,8 +27,8 @@ const Carousel = ({ images }) => {
         <div className="carousel-slide current-slide" key={currentIndex}>
           <img src={images[currentIndex]} alt={`Slide ${currentIndex + 1}`} />
           <div className="carousel-text">
-            <h2>Biz bilan o'z biznesingni rivojlantiring.</h2>
-            <p>Har qanday biznesni Avtomatlashtiramiz! 7 kunda tizimni o'rnatib, xodimlaringizni tayyorlab beramiz +365 kunlik support (video materiallar orqali).</p>
+            <h2>{t('carouselTitle')}</h2>
+            <p>{t('carouselDescription')}</p>
           </div>
         </div>
         <div className="carousel-slide next-slide" key={nextIndex}>

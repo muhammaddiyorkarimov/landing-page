@@ -5,11 +5,13 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import { EffectCoverflow, Pagination } from 'swiper/modules';
+import { useTranslation } from 'react-i18next';
 
 function OurTeams() {
   const [teams, setTeams] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -31,17 +33,17 @@ function OurTeams() {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div>{t('loading')}</div>;
   }
 
   if (error) {
-    return <div>Error: {error.message}</div>;
+    return <div>{t('error')}: {error.message}</div>;
   }
 
   return (
     <div className='our-teams'>
       <div className="container">
-        <div className="main-title">Bizning jamoa</div>
+        <div className="main-title">{t('ourTeams')}</div>
         <Swiper
           effect={'coverflow'}
           grabCursor={true}

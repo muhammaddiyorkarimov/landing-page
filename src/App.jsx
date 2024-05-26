@@ -7,6 +7,8 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import RootLayout from './layout/RootLayout';
 // pages
 import Home from './pages/Home';
+import { LanguageProvider } from './components/LanguageProvider/LanguageProvider';
+import './i18n'
 
 function App() {
 
@@ -18,7 +20,7 @@ function App() {
         children: [
           {
             index: true,
-            element: <Home/>
+            element: <Home />
           }
         ]
       },
@@ -27,7 +29,9 @@ function App() {
 
   return (
     <div className='App'>
-      <RouterProvider router={routes}/>
+      <LanguageProvider>
+        <RouterProvider router={routes} />
+      </LanguageProvider>
     </div>
   )
 }
