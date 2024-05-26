@@ -32,10 +32,12 @@ function Services() {
 
   const handleCardClick = (card) => {
     setSelectedCard(card);
+    document.body.style.overflow = 'hidden';  // Prevent scrolling
   };
 
   const handleCloseModal = () => {
     setSelectedCard(null);
+    document.body.style.overflow = 'auto';  // Re-enable scrolling
   };
 
   if (loading) {

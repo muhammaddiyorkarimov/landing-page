@@ -2,7 +2,6 @@
 .Home {
 	background-image: url('./images/background2.png');
 	background-repeat: no-repeat;
-	z-index: 100;
 	background-position: right top;
 	margin-top: 50px;
 }
