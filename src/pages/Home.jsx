@@ -11,6 +11,7 @@ import OurTeams from '../components/ourTeams/OurTeams';
 import Contact from '../components/contact/Contact';
 import Partners from '../components/partners/Partners';
 import BackToTopButton from '../components/BackToTopButton/BackToTopButton';
+import Certificate from '../components/certificates/Certificate';
 
 function Home() {
   const images = [automation1, automation2, automation3];
@@ -24,6 +25,7 @@ function Home() {
       </div>
       <section id="about-us">
         <About_us />
+        <Certificate/>
       </section>
       <section id="partners">
         <Partners />

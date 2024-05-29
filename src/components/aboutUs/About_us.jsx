@@ -30,28 +30,27 @@ function About_us() {
     fetchData();
   }, [language]);
 
-  if (loading) return <p>{t('loading')}</p>;
-  if (error) return <p>{t('error')}: {error.message}</p>;
-
   return (
     <div className='about-us'>
       <div className="container">
-        <div className="main-title"><h1>{t('aboutUsTitle')}</h1></div>
-        <div className="cards">
-          {data.map(item => (
-            <div className="card" key={item.id}>
-              <div className="about">
-                <div className="wrapper-image">
-                  <img src={item.image} alt="company" />
+        {loading ? <h1 style={{ color: "#fff" }}>{t('loading')}</h1> : error ? <h1 style={{ color: "#fff" }}>{t('error')}: {error.message}</h1> : <>
+          <div className="main-title"><h1>{t('aboutUsTitle')}</h1></div>
+          <div className="cards">
+            {data.map(item => (
+              <div className="card" key={item.id}>
+                <div className="about">
+                  <div className="wrapper-image">
+                    <img src={item.image} alt="company" />
+                  </div>
+                  <div className="title">{item.title}</div>
                 </div>
-                <div className="title">{item.title}</div>
+                <div className="description">
+                  <p>{item.description}</p>
+                </div>
               </div>
-              <div className="description">
-                <p>{item.description}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        </>}
       </div>
     </div>
   );

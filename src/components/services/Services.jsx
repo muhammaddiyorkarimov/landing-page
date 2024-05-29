@@ -40,31 +40,25 @@ function Services() {
     document.body.style.overflow = 'auto';  // Re-enable scrolling
   };
 
-  if (loading) {
-    return <div>{t('loading')}</div>;
-  }
-
-  if (error) {
-    return <div>{t('error')}: {error.message}</div>;
-  }
-
   return (
     <div className='services'>
+      <div className="main-title"><h1>{t('ourServices')}</h1></div>
       <div className="container">
-        <div className="main-title"><h1>{t('ourServices')}</h1></div>
-        <div className="cards">
-          {data.length > 0 && data.map((item) => (
-            <div key={item.id}>
-              <Card key={item.id} item={item} onClick={() => handleCardClick(item)} />
-            </div>
-          ))}
-        </div>
-        {selectedCard && (
-          <Modal
-            item={selectedCard}
-            onClose={handleCloseModal}
-          />
-        )}
+        {loading ? <h1 style={{ color: "#fff" }}>{t('loading')}</h1> : error ? <h1 style={{ color: "#fff" }}>{t('error')}: {error.message}</h1> : <>
+          <div className="cards">
+            {data.length > 0 && data.map((item) => (
+              <div key={item.id}>
+                <Card key={item.id} item={item} onClick={() => handleCardClick(item)} />
+              </div>
+            ))}
+          </div>
+          {selectedCard && (
+            <Modal
+              item={selectedCard}
+              onClose={handleCloseModal}
+            />
+          )}
+        </>}
       </div>
     </div>
   );

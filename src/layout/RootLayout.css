@@ -77,6 +77,11 @@ header .container {
   text-decoration: none;
 }
 
+.logo img {
+  width: 100px;
+  border-radius: 50%  ;
+}
+
 .items {
   display: flex;
   align-items: center;

@@ -4,6 +4,7 @@ import { Link as ScrollLink } from 'react-scroll';
 import './RootLayout.css';
 import { useLanguage } from './../components/LanguageProvider/LanguageProvider';
 import { useTranslation } from 'react-i18next';
+import logo from '../images/logo.svg'
 
 function RootLayout() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -18,7 +19,7 @@ function RootLayout() {
     <div className='root-layout'>
       <header>
         <div className="container">
-          <Link className="logo" to="/">.agency</Link>
+          <Link className="logo" to="/"><img src={logo} alt="logo" width={150} /></Link>
           <div className="header-right"></div>
           <nav className={`navbar ${sidebarOpen ? 'open' : ''}`}>
             <div style={{ position: 'absolute', right: '20px' }} className="hamburger-menu" onClick={toggleSidebar}>
@@ -34,7 +35,7 @@ function RootLayout() {
             <li><ScrollLink to="contact" smooth={true} duration={500}>{t('contact')}</ScrollLink></li>
             <div className="contact">
               <i className="fa-solid fa-phone"></i>
-              <span>+998 99 999 99 99</span>
+              <a href="tel:+998781137713">+998 78 113 77 13</a>
             </div>
           </nav>
           <div className="select-language">
@@ -55,7 +56,7 @@ function RootLayout() {
         <div style={{ padding: '50px' }} className="contact-card">
           <div className="contact-info">
             <h2>{t('contact')}</h2>
-            <p><i className="fa fa-phone"></i> +998 55-518-7007</p>
+            <p><i className="fa fa-phone"></i>+998 78 113 77 13</p>
             <p><i className="fa fa-envelope"></i> onefin.uz@gmail.com</p>
             <h3>{t('socialMedia')}</h3>
             <div className="social-media">
@@ -67,7 +68,8 @@ function RootLayout() {
           </div>
           <div className="map">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2995.152008837428!2d69.2323!3d41.2975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b8a00a4f0b5%3A0xfbf5e9b5750c5c3b!2sTashkent!5e0!3m2!1sen!2suz!4v1618043355763!5m2!1sen!2suz"
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1545583.3936040287!2d69.200593975!3d40.83416695037716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDDCsDIxJzU2LjAiTiA3McKwNDcnMDEuMCJF!5e0!3m2!1sen!2s!4v1716969096489!5m2!1sen!2s"
+              
               width="600"
               height="450"
               style={{ border: 0 }}

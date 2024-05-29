@@ -12,6 +12,7 @@ function Partners() {
   const { t } = useTranslation();
   const [partners, setPartners] = useState([]);
   const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchPartners = async () => {
@@ -29,56 +30,56 @@ function Partners() {
         setPartners(translatedData);
       } catch (error) {
         setError(error.message);
+      } finally {
+        setLoading(false);
       }
     };
 
     fetchPartners();
   }, [t]);
 
-  if (error) {
-    return <div>Error: {error}</div>;
-  }
-
   return (
     <div className='partners'>
+      {loading ? <h1 className='' style={{ color: "#fff" }}>{t('loading')}</h1> : error ? <h1 className='' style={{ color: "#fff" }}>{t('error')}: {error}</h1> : <>
       <div className="main-title">{t('ourPartners')}</div>
-      <Swiper className='container'
-        spaceBetween={30}
-        centeredSlides={true}
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: false,
-        }}
-        loop={true}
-        slidesPerView={5}
-        breakpoints={{
-          320: {
-            slidesPerView: 1,
-            spaceBetween: 10,
-          },
-          640: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-          },
-          1024: {
-            slidesPerView: 4,
-            spaceBetween: 40,
-          },
-        }}
-      >
-        {partners.map((partner) => (
-          <SwiperSlide key={partner.id}>
-            <div className='partner-slide'>
-              <img src={partner.image} alt={partner.name} />
-              <h3>{partner.name}</h3>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+        <Swiper className='container'
+          spaceBetween={30}
+          centeredSlides={true}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
+          loop={true}
+          slidesPerView={5}
+          breakpoints={{
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+            1024: {
+              slidesPerView: 4,
+              spaceBetween: 40,
+            },
+          }}
+        >
+          {partners.map((partner) => (
+            <SwiperSlide key={partner.id}>
+              <div className='partner-slide'>
+                <img src={partner.image} alt={partner.name} />
+                <h3>{partner.name}</h3>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </>}
     </div>
   );
 }

@@ -32,46 +32,40 @@ function OurTeams() {
     fetchData();
   }, []);
 
-  if (loading) {
-    return <div>{t('loading')}</div>;
-  }
-
-  if (error) {
-    return <div>{t('error')}: {error.message}</div>;
-  }
-
   return (
     <div className='our-teams'>
       <div className="container">
-        <div className="main-title">{t('ourTeams')}</div>
-        <Swiper
-          effect={'coverflow'}
-          grabCursor={true}
-          centeredSlides={true}
-          slidesPerView={'auto'}
-          coverflowEffect={{
-            rotate: 50,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: true,
-          }}
-          pagination={{ clickable: true }}
-          modules={[EffectCoverflow, Pagination]}
-          className="mySwiper"
-        >
-          {teams.map((team) => (
-            <SwiperSlide key={team.id}>
-              <div className="user-image">
-                <img src={team.image} alt={team.title} />
-              </div>
-              <div className="slide-content">
-                <h3>{team.title}</h3>
-                <p>{team.description}</p>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        {loading ? <h1 style={{ color: "#fff", textAlign: 'center' }}>{t('loading')}</h1> : error ? <h1 style={{ color: "#fff", textAlign: 'center' }}>{t('error')}: {error.message}</h1> : <>
+          <div className="main-title">{t('ourTeams')}</div>
+          <Swiper
+            effect={'coverflow'}
+            grabCursor={true}
+            centeredSlides={true}
+            slidesPerView={'auto'}
+            coverflowEffect={{
+              rotate: 50,
+              stretch: 0,
+              depth: 100,
+              modifier: 1,
+              slideShadows: true,
+            }}
+            pagination={{ clickable: true }}
+            modules={[EffectCoverflow, Pagination]}
+            className="mySwiper"
+          >
+            {teams.map((team) => (
+              <SwiperSlide key={team.id}>
+                <div className="user-image">
+                  <img src={team.image} alt={team.title} />
+                </div>
+                <div className="slide-content">
+                  <h3>{team.title}</h3>
+                  <p>{team.description}</p>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </>}
       </div>
     </div>
   );
