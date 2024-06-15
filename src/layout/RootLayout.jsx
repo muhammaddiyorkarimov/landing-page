@@ -68,7 +68,7 @@ function RootLayout() {
           </div>
           <div className="map">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1545583.3936040287!2d69.200593975!3d40.83416695037716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDDCsDIxJzU2LjAiTiA3McKwNDcnMDEuMCJF!5e0!3m2!1sen!2s!4v1716969096489!5m2!1sen!2s"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59915.49844840892!2d69.20407624303485!3d41.31115128493007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38aef4e71171a0e5%3A0x7d64b1d6d5e1c0f4!2z0J3QsNGI0LrQtdC90LjRhtC60LDRjywg0KLQvtC00LDQvQ!5e0!3m2!1suz!2s!4v1688476828371!5m2!1suz!2s"
               
               width="600"
               height="450"
