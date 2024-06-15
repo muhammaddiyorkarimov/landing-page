@@ -90,24 +90,8 @@ function Services() {
             <div>
               <Card item={t('howToCompanyTechcraft')} onClick={() => handleCardClick('salom')} />
             </div>
-            <div>
-              <Card item={t('howToCompanyTechcraft')} onClick={() => handleCardClick('salom')} />
-            </div>
-            <div>
-              <Card item={t('howToCompanyTechcraft')} onClick={() => handleCardClick('salom')} />
-            </div>
-            <div>
-              <Card item={t('howToCompanyTechcraft')} onClick={() => handleCardClick('salom')} />
-            </div>
-            <div>
-              <Card item={t('howToCompanyTechcraft')} onClick={() => handleCardClick('salom')} />
-            </div>
-            <div>
-              <Card item={t('howToCompanyTechcraft')} onClick={() => handleCardClick('salom')} />
-            </div>
-            <div>
-              <Card item={t('howToCompanyTechcraft')} onClick={() => handleCardClick('salom')} />
-            </div>
+            
+            
           </div>
           {selectedCard && (
             <Modal

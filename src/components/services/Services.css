@@ -3,7 +3,8 @@
 	background-repeat: no-repeat;
   background-position: center center;
 	width: 100%;
-  height: 90vh;
+  /* height: 90vh; */
+  height: 100%;
   position: relative;
 }
 
@@ -11,6 +12,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100%;
+  padding: 50px;
 }
 
 .services .main-title {
@@ -18,6 +21,7 @@
 	font-weight: 600;
 	font-size: 24px;
 	color: var(--primary-background-color);
+  margin-top: 20px;
 }
 
 .services {
@@ -26,6 +30,7 @@
   align-items: center;
   justify-content: center;
   padding: 20px;
+  height: 100%;
 }
 
 .services .container .cards {
