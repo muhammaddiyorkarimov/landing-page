@@ -10,6 +10,7 @@ i18n
     resources: {
       uz: {
         translation: {
+          "howToCompanyTechcraft": "Techcraft qanday kompaniya",
           "carouselTitle": "Raqamlashtiramiz!",
           "carouselDescription": "Barcha turdagi biznes jarayonlarni 0 dan raqamlashtiramiz",
           "aboutUsTitle": "Biz haqimizda",
@@ -23,7 +24,7 @@ i18n
           "ourTeam": "Bizning jamoa",
           "contact": "Aloqa",
           "socialMedia": "Ijtimoiy tarmoqlarimiz",
-          "address": "Manzil: Farg'ona shahar, Aeroport ko'chasi 1-uy",
+          "address": "Manzil: Farg'ona shahar, Aeroport ko'chasi",
           "ourServices": "Bizning xizmatlarimiz",
           "ourTeams": "Bizning jamoa",
           "contactUs": "Biz bilan bog'laning",
@@ -46,6 +47,7 @@ i18n
       },
       ru: {
         translation: {
+          "howToCompanyTechcraft": "Какая компания Techcraft",
           "carouselTitle": "Оцифровываем!",
           "carouselDescription": "Цифровизируем все виды бизнес-процессов с нуля.",
           "aboutUsTitle": "О нас",
@@ -59,7 +61,7 @@ i18n
           "ourTeam": "Наша команда",
           "contact": "Контакты",
           "socialMedia": "Наши социальные сети",
-          "address": "Адрес: г. Фергана, ул. аэропортовая, д. 1",
+          "address": "Адрес: г. Фергана, ул. аэропортовая",
           "ourServices": "Наши услуги",
           "ourTeams": "Наша команда",
           "contactUs": "Связаться с нами",

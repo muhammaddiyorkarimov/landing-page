@@ -25,7 +25,7 @@ function Home() {
       </div>
       <section id="about-us">
         <About_us />
-        <Certificate/>
+        {/* <Certificate/> */}
       </section>
       <section id="partners">
         <Partners />

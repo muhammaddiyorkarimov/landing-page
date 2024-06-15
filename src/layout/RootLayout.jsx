@@ -19,7 +19,7 @@ function RootLayout() {
     <div className='root-layout'>
       <header>
         <div className="container">
-          <Link className="logo" to="/"><img src={logo} alt="logo" width={150} /></Link>
+          <Link className="logo" to="/"><h2><span style={{color: 'orange'}}>Tech</span>craft</h2></Link>
           <div className="header-right"></div>
           <nav className={`navbar ${sidebarOpen ? 'open' : ''}`}>
             <div style={{ position: 'absolute', right: '20px' }} className="hamburger-menu" onClick={toggleSidebar}>
@@ -35,7 +35,7 @@ function RootLayout() {
             <li><ScrollLink to="contact" smooth={true} duration={500}>{t('contact')}</ScrollLink></li>
             <div className="contact">
               <i className="fa-solid fa-phone"></i>
-              <a href="tel:+998781137713">+998 78 113 77 13</a>
+              <a href="tel:+998+998901602221">+998 90 160 22 21</a>
             </div>
           </nav>
           <div className="select-language">
@@ -56,8 +56,8 @@ function RootLayout() {
         <div style={{ padding: '50px' }} className="contact-card">
           <div className="contact-info">
             <h2>{t('contact')}</h2>
-            <p><i className="fa fa-phone"></i>+998 78 113 77 13</p>
-            <p><i className="fa fa-envelope"></i> onefin.uz@gmail.com</p>
+            <p><i className="fa fa-phone"></i>+998 90 160 22 21</p>
+            <p><i className="fa fa-envelope"></i>example@gmail.com</p>
             <h3>{t('socialMedia')}</h3>
             <div className="social-media">
               <a href="#"><i className="fab fa-telegram"></i></a>

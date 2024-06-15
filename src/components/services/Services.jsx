@@ -44,8 +44,10 @@ function Services() {
     <div className='services'>
       <div className="main-title"><h1>{t('ourServices')}</h1></div>
       <div className="container">
-        {loading ? <h1 style={{ color: "#fff" }}>{t('loading')}</h1> : error ? <h1 style={{ color: "#fff" }}>{t('error')}: {error.message}</h1> : <>
-          <div className="cards">
+        {/* {loading ? <h1 style={{ color: "#fff" }}>{t('loading')}</h1> : error ? <h1 style={{ color: "#fff" }}>{t('error')}: {error.message}</h1> : 
+        } */}
+        <>
+          {/* <div className="cards">
             {data.length > 0 && data.map((item) => (
               <div key={item.id}>
                 <Card key={item.id} item={item} onClick={() => handleCardClick(item)} />
@@ -57,8 +59,63 @@ function Services() {
               item={selectedCard}
               onClose={handleCloseModal}
             />
+          )} */}
+        </>
+        <>
+          <div className="cards">
+            <div>
+              <Card item={t('howToCompanyTechcraft')} onClick={() => handleCardClick('salom')} />
+            </div>
+            <div>
+              <Card item={t('howToCompanyTechcraft')} onClick={() => handleCardClick('salom')} />
+            </div>
+            <div>
+              <Card item={t('howToCompanyTechcraft')} onClick={() => handleCardClick('salom')} />
+            </div>
+            <div>
+              <Card item={t('howToCompanyTechcraft')} onClick={() => handleCardClick('salom')} />
+            </div>
+            <div>
+              <Card item={t('howToCompanyTechcraft')} onClick={() => handleCardClick('salom')} />
+            </div>
+            <div>
+              <Card item={t('howToCompanyTechcraft')} onClick={() => handleCardClick('salom')} />
+            </div>
+            <div>
+              <Card item={t('howToCompanyTechcraft')} onClick={() => handleCardClick('salom')} />
+            </div>
+            <div>
+              <Card item={t('howToCompanyTechcraft')} onClick={() => handleCardClick('salom')} />
+            </div>
+            <div>
+              <Card item={t('howToCompanyTechcraft')} onClick={() => handleCardClick('salom')} />
+            </div>
+            <div>
+              <Card item={t('howToCompanyTechcraft')} onClick={() => handleCardClick('salom')} />
+            </div>
+            <div>
+              <Card item={t('howToCompanyTechcraft')} onClick={() => handleCardClick('salom')} />
+            </div>
+            <div>
+              <Card item={t('howToCompanyTechcraft')} onClick={() => handleCardClick('salom')} />
+            </div>
+            <div>
+              <Card item={t('howToCompanyTechcraft')} onClick={() => handleCardClick('salom')} />
+            </div>
+            <div>
+              <Card item={t('howToCompanyTechcraft')} onClick={() => handleCardClick('salom')} />
+            </div>
+            <div>
+              <Card item={t('howToCompanyTechcraft')} onClick={() => handleCardClick('salom')} />
+            </div>
+          </div>
+          {selectedCard && (
+            <Modal
+              item={selectedCard}
+              onClose={handleCloseModal}
+            />
           )}
-        </>}
+        </>
       </div>
     </div>
   );

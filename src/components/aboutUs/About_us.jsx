@@ -4,6 +4,8 @@ import './AboutUs.css';
 import { useLanguage } from './../LanguageProvider/LanguageProvider';
 import { useTranslation } from 'react-i18next';
 
+import img from '../../images/automation1.png'
+
 function About_us() {
   const { language } = useLanguage();
   const { t } = useTranslation();
@@ -33,10 +35,11 @@ function About_us() {
   return (
     <div className='about-us'>
       <div className="container">
-        {loading ? <h1 style={{ color: "#fff" }}>{t('loading')}</h1> : error ? <h1 style={{ color: "#fff" }}>{t('error')}: {error.message}</h1> : <>
+        {/* {loading ? <h1 style={{ color: "#fff" }}>{t('loading')}</h1> : error ? <h1 style={{ color: "#fff" }}>{t('error')}: {error.message}</h1> :} */}
+        <>
           <div className="main-title"><h1>{t('aboutUsTitle')}</h1></div>
           <div className="cards">
-            {data.map(item => (
+            {/* {data.map(item => (
               <div className="card" key={item.id}>
                 <div className="about">
                   <div className="wrapper-image">
@@ -48,9 +51,64 @@ function About_us() {
                   <p>{item.description}</p>
                 </div>
               </div>
-            ))}
+            ))} */}
+            <div className="card">
+              <div className="about">
+                <div className="wrapper-image">
+                  <img src={img} alt="company" />
+                </div>
+                <div className="title">{t('carouselTitle')}</div>
+              </div>
+              <div className="description">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In id deserunt provident saepe blanditiis sunt dolore vel incidunt eum quas eius dolorem rerum expedita dolores quod aliquam assumenda quibusdam, reprehenderit consectetur.</p>
+              </div>
+            </div>
+            <div className="card">
+              <div className="about">
+                <div className="wrapper-image">
+                  <img src={img} alt="company" />
+                </div>
+                <div className="title">{t('carouselTitle')}</div>
+              </div>
+              <div className="description">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In id deserunt provident saepe blanditiis sunt dolore vel incidunt eum quas eius dolorem rerum expedita dolores quod aliquam assumenda quibusdam, reprehenderit consectetur.</p>
+              </div>
+            </div>
+            <div className="card">
+              <div className="about">
+                <div className="wrapper-image">
+                  <img src={img} alt="company" />
+                </div>
+                <div className="title">{t('carouselTitle')}</div>
+              </div>
+              <div className="description">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In id deserunt provident saepe blanditiis sunt dolore vel incidunt eum quas eius dolorem rerum expedita dolores quod aliquam assumenda quibusdam, reprehenderit consectetur.</p>
+              </div>
+            </div>
+            <div className="card">
+              <div className="about">
+                <div className="wrapper-image">
+                  <img src={img} alt="company" />
+                </div>
+                <div className="title">{t('carouselTitle')}</div>
+              </div>
+              <div className="description">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In id deserunt provident saepe blanditiis sunt dolore vel incidunt eum quas eius dolorem rerum expedita dolores quod aliquam assumenda quibusdam, reprehenderit consectetur.</p>
+              </div>
+            </div>
+            <div className="card">
+              <div className="about">
+                <div className="wrapper-image">
+                  <img src={img} alt="company" />
+                </div>
+                <div className="title">{t('carouselTitle')}</div>
+              </div>
+              <div className="description">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In id deserunt provident saepe blanditiis sunt dolore vel incidunt eum quas eius dolorem rerum expedita dolores quod aliquam assumenda quibusdam, reprehenderit consectetur.</p>
+              </div>
+            </div>
           </div>
-        </>}
+        </>
       </div>
     </div>
   );

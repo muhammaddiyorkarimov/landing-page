@@ -6,6 +6,8 @@ import SwiperCore from 'swiper';
 import { Autoplay } from 'swiper/modules';
 import { useTranslation } from 'react-i18next';
 
+import img from '../../images/automation1.png'
+
 SwiperCore.use([Autoplay]);
 
 function Partners() {
@@ -40,8 +42,9 @@ function Partners() {
 
   return (
     <div className='partners'>
-      {loading ? <h1 className='' style={{ color: "#fff" }}>{t('loading')}</h1> : error ? <h1 className='' style={{ color: "#fff" }}>{t('error')}: {error}</h1> : <>
-      <div className="main-title">{t('ourPartners')}</div>
+      {/* {loading ? <h1 className='' style={{ color: "#fff" }}>{t('loading')}</h1> : error ? <h1 className='' style={{ color: "#fff" }}>{t('error')}: {error}</h1> : } */}
+      <>
+        <div className="main-title">{t('ourPartners')}</div>
         <Swiper className='container'
           spaceBetween={30}
           centeredSlides={true}
@@ -71,15 +74,46 @@ function Partners() {
           }}
         >
           {partners.map((partner) => (
-            <SwiperSlide key={partner.id}>
-              <div className='partner-slide'>
-                <img src={partner.image} alt={partner.name} />
-                <h3>{partner.name}</h3>
-              </div>
-            </SwiperSlide>
+            <>
+              <SwiperSlide key={partner.id}>
+                <div className='partner-slide'>
+                  <img src={img} alt='Techcraft' />
+                  <h3>Techcraft</h3>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide key={partner.id}>
+                <div className='partner-slide'>
+                  <img src={img} alt='Techcraft' />
+                  <h3>Techcraft</h3>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide key={partner.id}>
+                <div className='partner-slide'>
+                  <img src={img} alt='Techcraft' />
+                  <h3>Techcraft</h3>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide key={partner.id}>
+                <div className='partner-slide'>
+                  <img src={img} alt='Techcraft' />
+                  <h3>Techcraft</h3>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide key={partner.id}>
+                <div className='partner-slide'>
+                  <img src={img} alt='Techcraft' />
+                  <h3>Techcraft</h3>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide key={partner.id}>
+                <div className='partner-slide'>
+                  <img src={img} alt='Techcraft' />
+                  <h3>Techcraft</h3>
+                </div>
+              </SwiperSlide></>
           ))}
         </Swiper>
-      </>}
+      </>
     </div>
   );
 }
